@@ -5,7 +5,7 @@ let users = require("./auth_users.js").users;
 
 const public_users = express.Router();
 
-// Task 6: Register a new user
+// Register a new user
 public_users.post("/register", (req, res) => {
     const username = req.body.username;
     const password = req.body.password;
@@ -112,7 +112,7 @@ public_users.get('/title/:title', async function (req, res) {
     }
 });
 
-// Task 5: Get book review
+// Get book review
 public_users.get('/review/:isbn', function (req, res) {
     const isbn = req.params.isbn;
 
@@ -124,4 +124,3 @@ public_users.get('/review/:isbn', function (req, res) {
 });
 
 module.exports.general = public_users;
-
